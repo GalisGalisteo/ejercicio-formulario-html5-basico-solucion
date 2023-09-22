@@ -11,12 +11,33 @@
 </head>
 
 <body class="container">
-    <form method="post" action="">
+    <form method="post" action="https://pimec2023-2.free.beeceptor.com">
 
         <fieldset>
 
-            <label for="nombre">Nombre: </label>
-            <input type="text" required maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
+            <label for="name">Nombre: </label>
+            <input type="text" required maxlength="50" placeholder="Galis" name="name" id="name" required>
+
+            <label for="age">Edad: </label>
+            <input type="number" name="age" id="age" min="18" max="99" placeholder="20" required>
+
+            <label for="dni">DNI: </label>
+            <input type="text" name="dni" id="dni" placeholder="12345678X" pattern="[0-9]{8}[A-Z]{1}" required>
+
+            <label for="city">Ciudad de origen: </label>
+            <input type="text" name="city" id="city" placeholder="Barcelona" maxlength="100" required></textarea>
+
+            <label for="transportation">¿Cómo vienes a estudiar?</label>
+            <select name="transportation" id="transportation" required>
+                <option value="walking" selected>A pie</option>
+                <option value="publicTransportation">Transporte público</option>
+                <option value="privateTransportation">Transporte privado</option>
+            </select>
+
+            <label for="goals">Objetivos del curso: </label>
+            <textarea name="goals" id="goals" placeholder="Mis objetivos del curso son..." cols="30" rows="4"
+                maxlength="1024"></textarea>
+
         </fieldset>
 
         <input type="submit" class="submit" id="submit" value="Enviar" />
